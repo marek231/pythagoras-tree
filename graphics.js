@@ -17,13 +17,13 @@ window.onload = function() {
 	
 	// The angle will vary between -PI/2 and 0.
 	var branchAngleA = - Math.PI / 4 + Math.sin(Number(slider.value)) * Math.PI / 4;
-	tree(width / 2 - 100, height, 200, 0, 8);
+	tree(width / 2 - 100, height, height/20, 0, 8);
 	
 	// Redraw the tree on slider drag.
 	slider.oninput = function() {
 		context.clearRect(0, 0, canvas.width, canvas.height);
 		branchAngleA = - Math.PI / 4 + Math.sin(Number(slider.value)) * Math.PI / 4;
-		tree(width / 2 - 100, height, 200, 0, 8);
+		tree(width / 2 - 100, height/20, 200, 0, 8);
 	}
 	
 	// Recursive tree drawing function.
